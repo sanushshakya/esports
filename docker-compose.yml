@@ -1,0 +1,52 @@
+version: "3.9" 
+services:
+  postgres:
+    image: postgres
+    container_name: esport_database
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_USER: esport 
+      POSTGRES_PASSWORD: esport
+      POSTGRES_DB: esport
+    ports:
+      - "5432:5432"
+    networks:
+      - default
+
+  backend:
+    build: ./be/esport/
+    restart: always
+    container_name: backend
+    ports:
+      - '8000:8000'
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: esport
+      DATABASE_NAME: esport
+      DATABASE_USERNAME: esport
+      DATABASE_PORT: 5432
+    volumes:
+      - ./media:/code/media/
+      - ./static:/code/static/ 
+    networks:
+      - default
+
+  frontend:
+    build: ./fe/esport-card/
+    restart: always
+    ports:
+      - '3000:3000'
+    depends_on:
+      - backend
+    networks:
+      - default
+
+volumes:
+  postgres-data:
+
+networks:
+  default:
+    driver: bridge
