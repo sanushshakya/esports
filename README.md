@@ -1,13 +1,16 @@
 # TO RUN THE PROEJCT
 
-- 1. Clone the project
-- 2. Install docker on your system if not already
-- 3. Run the following command on the root of the project dir:
+1. Clone the project
+2. Install docker on your system if not already
+3. Run the following command on the root of the project dir:
+
 - - docker-compose up (to start a new container)
 - - docker ps (to check the running containers)
 - - docker logs -f <container-id> (to check the container logs)
 - - docker exec -it <container-id> /bin/bash (to run the container terminal)
-- 4. To make changes and rebuild
+
+4. To make changes and rebuild
+
 - - docker-compose down (to stop containers)
 - - docker-compose p --build (to restart and update the changes in container)
 
@@ -19,21 +22,21 @@
 - DB_HOST=esport_database //localhost
 - DB_PORT=5432
 
-SECRET_KEY = your-django-secret-key
-ALLOWED_HOSTS=127.0.0.1,localhost,localhost:3000,127.0.0.1:8000
-CORS_ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000,http://192.168.101.3:3000
+- SECRET_KEY = your-django-secret-key
+- ALLOWED_HOSTS=127.0.0.1,localhost,localhost:3000,127.0.0.1:8000
+- CORS_ALLOWED_ORIGINS=http://localhost:3000,http://127.0.0.1:3000,http://192.168.101.3:3000
 
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=youremail@gmail.com
-EMAIL_HOST_PASSWORD=yourpasskey
-JWT_SECRET=secretkey
-TOKEN_KEY=secretkey
+- EMAIL_HOST=smtp.gmail.com
+- EMAIL_PORT=587
+- EMAIL_USE_TLS=True
+- EMAIL_HOST_USER=youremail@gmail.com
+- EMAIL_HOST_PASSWORD=yourpasskey
+- JWT_SECRET=secretkey
+- TOKEN_KEY=secretkey
 
 # Env file for Frontend
 
-NEXT_PUBLIC_API_URL=http://127.0.0.1:8000/api
+- NEXT_PUBLIC_API_URL=http://127.0.0.1:8000/api
 
 # Project Description
 
