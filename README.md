@@ -42,6 +42,8 @@
 
 This project is a full-stack e-commerce web application with a built-in wallet functionality, implemented with a modern technology stack for scalability, security, and performance.
 
+<img width="1353" alt="Screenshot 2024-12-26 at 7 53 17 PM" src="https://github.com/user-attachments/assets/0ffa9f17-cc3d-4d85-bcd3-ac3d73904d3d" />
+
 ## Frontend: Next.js (with TypeScript)
 
 ### 1.Framework:
