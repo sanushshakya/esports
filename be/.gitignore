@@ -2,3 +2,5 @@
 venv
 /venv/
 /esport/.env
+/esport/static/
+/esport/media/
